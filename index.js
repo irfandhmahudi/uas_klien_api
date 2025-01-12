@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: ["https://uas-klien-ui.vercel.app"],
-    credentials: true, // Membolehkan cookies dikirimkan
+    origin: "https://uas-klien-api.vercel.app", // Sesuaikan dengan domain frontend Anda
+    credentials: true, // Mengizinkan pengiriman cookies
   })
 );
 
