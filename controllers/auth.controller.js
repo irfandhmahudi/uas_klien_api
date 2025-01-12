@@ -112,7 +112,7 @@ export const loginUser = async (req, res) => {
     // Simpan token di cookie
     res.cookie("jwt", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "development",
+      secure: process.env.NODE_ENV === "production",
       sameSite: "strict",
       maxAge: 1000 * 60 * 60 * 24 * 5, //5 days
     });
