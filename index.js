@@ -17,6 +17,7 @@ app.use(cookieParser());
 // Middleware untuk parsing body JSON
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public")); // Pastikan direktori file statis sudah benar
 
 app.use(
   cors({
