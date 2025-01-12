@@ -25,6 +25,10 @@ app.use(
   })
 );
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 // Route for users
 app.use("/api/v1/user", authRoutes);
 
